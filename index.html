@@ -1,108 +1,173 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kunci Jawaban Rahasia</title>
-
-<style>
-    body{
-        font-family: Arial, sans-serif;
-        background: #f0f2f5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunci Jawaban</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    .box{
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        text-align: center;
-        width: 350px;
+    body {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
     }
 
-    input{
-        width: 90%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        font-size: 16px;
+    .container {
+      width: 90%;
+      max-width: 400px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    button{
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        background: #007bff;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
     }
 
-    button:hover{
-        background: #0056b3;
+    input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
     }
 
-    #gambarJawaban{
-        display: none;
-        margin-top: 20px;
-        width: 100%;
-        border-radius: 10px;
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #22c55e;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    #pesan{
-        margin-top: 10px;
-        color: red;
+    button:hover {
+      background: #16a34a;
     }
-</style>
+
+    .hidden {
+      display: none;
+    }
+
+    .jawaban {
+      text-align: left;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .error {
+      color: #fecaca;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div id="loginBox">
+      <h1>🔒 Login</h1>
+      <input type="password" id="password" placeholder="Masukkan Password" />
+      <button onclick="cekPassword()">Masuk</button>
+      <p class="error" id="error"></p>
+    </div>
 
-<div class="box">
+    <div id="content" class="hidden">
+      <h1>📘 Kunci Jawaban Essay</h1>
 
-    <h2>Kunci Jawaban</h2>
+      <div class="jawaban">
+        <p><b>1. </b></p>
+        <p><b>Jawaban:</b> B. Wilayah Pengguna</p>
 
-    <input type="password" id="password" placeholder="Masukkan sandi">
+        <p><b>2.</b></p>
+        <p><b>Jawaban:</b> C. Variasi Dialek</p>
 
-    <br>
+        <p><b>3.</b></p>
+        <p><b>Jawaban:</b> C. Tidung Tengara</p>
 
-    <button onclick="cekPassword()">Masuk</button>
+        <p><b>4.</b></p>
+        <p><b>Jawaban:</b> C. Korea</p>
 
-    <p id="pesan"></p>
+        <p><b>5.</b></p>
+        <p><b>Jawaban:</b> D. Jawa</p>
 
-    <!-- GANTI LINK GOOGLE DRIVE DISINI -->
-    <img 
-        id="gambarJawaban"
-       src="https://lh3.googleusercontent.com/d/1bqd3CAWMbL1kGjIAQ3-3nz2zaUYDLSjY"
-        alt="Kunci Jawaban">
+        <p><b>6.</b></p>
+        <p><b>Jawaban:</b> B. Tidung</p>
 
-</div>
+        <p><b>7.</b></p>
+        <p><b>Jawaban:</b> C. Beberapa Wilayah Pesisir</p>
 
-<script>
+        <p><b>8.</b></p>
+        <p><b>Jawaban:</b> C. Pesisir atau peraiaran air asin</p>
 
-function cekPassword(){
+        <p><b>9.</b></p>
+        <p><b>Jawaban:</b> A. Salimbatu</p>
 
-    const sandiBenar = "210104";
-    const input = document.getElementById("password").value;
+        <p><b>10.</b></p>
+        <p><b>Jawaban:</b> B. Perairan air tawar</p>
 
-    if(input === sandiBenar){
+        <p><b>11.</b></p>
+        <p><b>Jawaban:</b> B. Sesayap</p>
 
-        document.getElementById("gambarJawaban").style.display = "block";
-        document.getElementById("pesan").innerHTML = "Akses berhasil";
+        <p><b>12.</b></p>
+        <p><b>Jawaban:</b> B. Wilayah peraiaran tawar</p>
 
-    }else{
+        <p><b>13.</b></p>
+        <p><b>Jawaban:</b> C. Bahasa Tengalan </p>
 
-        document.getElementById("pesan").innerHTML = "Sandi salah!";
+        <p><b>14.</b></p>
+        <p><b>Jawaban:</b> B. Dayak Belusu</p>
 
+        <p><b>15.</b></p>
+        <p><b>Jawaban:</b> A. Dayak Abay</p>
+
+        <br>
+      </div>
+
+      <br>
+      <button onclick="logout()">Keluar</button>
+    </div>
+  </div>
+
+  <script>
+    // Ganti password di bawah ini
+    const passwordBenar = "210104";
+
+    function cekPassword() {
+      const input = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      if (input === passwordBenar) {
+        document.getElementById("loginBox").classList.add("hidden");
+        document.getElementById("content").classList.remove("hidden");
+        error.innerText = "";
+      } else {
+        error.innerText = "Password salah!";
+      }
     }
-}
 
-</script>
-
+    function logout() {
+      document.getElementById("content").classList.add("hidden");
+      document.getElementById("loginBox").classList.remove("hidden");
+      document.getElementById("password").value = "";
+    }
+  </script>
 </body>
 </html>
