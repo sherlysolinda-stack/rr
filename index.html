@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kunci Jawaban Rahasia</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .box{
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        text-align: center;
+        width: 350px;
+    }
+
+    input{
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    button{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #007bff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background: #0056b3;
+    }
+
+    #gambarJawaban{
+        display: none;
+        margin-top: 20px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #pesan{
+        margin-top: 10px;
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+
+    <h2>Kunci Jawaban</h2>
+
+    <input type="password" id="password" placeholder="Masukkan sandi">
+
+    <br>
+
+    <button onclick="cekPassword()">Masuk</button>
+
+    <p id="pesan"></p>
+
+    <!-- GANTI LINK GOOGLE DRIVE DISINI -->
+    <img 
+        id="gambarJawaban"
+       src="https://lh3.googleusercontent.com/d/1S5qxx2XoQu-Lmo80cDuw-9XiYh-j8vnT"
+        alt="Kunci Jawaban">
+
+</div>
+
+<script>
+
+function cekPassword(){
+
+    const sandiBenar = "210104";
+    const input = document.getElementById("password").value;
+
+    if(input === sandiBenar){
+
+        document.getElementById("gambarJawaban").style.display = "block";
+        document.getElementById("pesan").innerHTML = "Akses berhasil";
+
+    }else{
+
+        document.getElementById("pesan").innerHTML = "Sandi salah!";
+
+    }
+}
+
+</script>
+
+</body>
+</html>
